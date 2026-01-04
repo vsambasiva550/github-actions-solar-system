@@ -36,7 +36,7 @@ jobs:
             name: Mocha-Test-Result
             path: test-results.xml
     code-coverage:
-        name: Unit Testing
+        name: Code coverage
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repository
@@ -51,7 +51,7 @@ jobs:
           run: npm install
     
         - name: Unit Testing
-          run: npm run code-coverage
+          run: npm run coverage
           
         - name: Archive Test Result
           if: ${{ always() }}
