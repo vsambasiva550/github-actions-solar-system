@@ -30,7 +30,7 @@ jobs:
           run: npm test
           
         - name: Archive Test Result
-          if: ${{ always() }}
+          if: always()
           uses: actions/upload-artifact@v4
           with:
             name: Mocha-Test-Result
@@ -60,4 +60,5 @@ jobs:
             name: Code-Coverage-Result
             path: coverage
             retention-days: 5
+
 
